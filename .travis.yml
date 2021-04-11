@@ -9,5 +9,8 @@ install:
 script:
   - spark-submit bitcointrading.py "input/dataset_one.csv" "input/dataset_one.csv" "United Kingdom,Netherlands" "client_data"
 
+after_success:
+  - python readlogfile.py
+
 
 
