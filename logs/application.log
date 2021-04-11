@@ -1,0 +1,17 @@
+2021-04-12 00:56:31,105 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 00:56:31,108 — ABM AMRO — INFO — Current time 20210412005631
+2021-04-12 00:56:31,108 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 00:56:31,108 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 00:56:31,108 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 00:56:31,109 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 00:56:49,959 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 00:57:30,659 — ABM AMRO — INFO — Loading 2nd data set
+2021-04-12 00:57:31,939 — ABM AMRO — INFO — Joining 2 data frame. Performing Left join
+2021-04-12 00:57:34,277 — ABM AMRO — INFO — Writing data as CSV to location 'client_data' 
+2021-04-12 01:01:01,658 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 01:01:01,658 — ABM AMRO — INFO — Current time 20210412010101
+2021-04-12 01:01:01,658 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 01:01:01,659 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 01:01:01,659 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 01:01:01,659 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 01:01:15,617 — ABM AMRO — INFO — Loading 1st data set
