@@ -6,6 +6,7 @@ APP_LOG_FILE = "logs/application.log"
 FORMAT = logging.Formatter("%(asctime)s — %(name)s — %(levelname)s — %(message)s")
 
 
+
 def get_consoleHandler():
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setFormatter(FORMAT)
