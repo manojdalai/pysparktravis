@@ -65,7 +65,7 @@ class KommatiPara:
     join_df = df1_1.join(df2_1, 'id', 'left')
 
     colnames = join_df.columns
-    columndict = {"btc_a": "bitcoin_address", "cc_t": "credit_card_type", "id": "client_identifier", "country": "desha"}
+    columndict = {"btc_a": "bitcoin_address", "cc_t": "credit_card_type", "id": "client_identifier"}
 
     # RENAME COLUMNS OF THE DATAFRAME
     log.info("Renaming column of data frame")
