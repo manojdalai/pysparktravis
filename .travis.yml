@@ -6,27 +6,8 @@ python:
 install:
   - pip install -r requirements.txt
 
-#branches:
-#  only:
-#    - master
-
-
-
-
-
-#jobs:
-#  - include:
-#      - stages:
-#          - compile
-#          - test
-#              - script
-
-#- deploy
-
 script:
-#  - python helloworld.py
-#  - spark-submit abnamro.py 'input/dataset_one.csv'
-  - print("Integration between git and travis ci")
+  - python helloworld.py
 
 
 
