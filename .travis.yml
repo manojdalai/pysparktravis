@@ -7,7 +7,7 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - python helloworld.py
+  - spark-submit bitcointrading.py "input/dataset_one.csv" "input/dataset_one.csv" "United Kingdom,Netherlands" "client_data"
 
 
 
