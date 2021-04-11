@@ -2,7 +2,7 @@ import logging
 import sys
 from logging.handlers import TimedRotatingFileHandler, RotatingFileHandler
 
-APP_LOG_FILE = "logs/app.log"
+APP_LOG_FILE = "logs/application.log"
 FORMAT = logging.Formatter("%(asctime)s — %(name)s — %(levelname)s — %(message)s")
 
 
