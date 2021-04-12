@@ -1,18 +1,23 @@
+"""
+
+"""
 import sys
 from datetime import datetime
 from pyspark.sql.session import SparkSession
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType
 from userdefinedfunction import functions
 from pyspark.sql import functions as F
-from customlogger import getLogger
+from customlogger import loghandler
 
 
 class KommatiPara:
+    """
 
+    """
     currenttime = datetime.now().strftime('%Y%m%d%H%M%S')
 
     # INITIALIZING LOGGING FRAMEWORK
-    log = getLogger("ABM AMRO")
+    log = loghandler.getLogger("ABM AMRO")
     log.info("Starting pyspark application...")
     log.info("Current time %s" % currenttime)
     log.info("Input filepath for dataset 1 %s" % (sys.argv[1]))
@@ -37,6 +42,11 @@ class KommatiPara:
         .getOrCreate()
 
     def load_dataframe(spark, filename):
+        """load data sets such as dataset 1 and dataset 3
+
+        :param filename: input file nema (csv).
+        :return: dataframe with header
+        """
         raw_data = spark.read \
             .format('csv') \
             .option('header', 'true') \
@@ -79,7 +89,7 @@ class KommatiPara:
     # RENAME COLUMNS OF THE DATAFRAME
     log.info("Renaming column of data frame")
     try:
-        newcolumn = functions.remane_column(columndict, colnames)
+        newcolumn = functions.getRenamedColumn(columndict, colnames)
         log.info("New column of the data frame %s" % (newcolumn))
         rename_df = join_df.toDF(*newcolumn)
     except:
