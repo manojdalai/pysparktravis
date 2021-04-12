@@ -63,10 +63,14 @@ class KommatiPara:
     # DATAFRAME JOINING
     log.info("Joining 2 data frame. Performing Left join")
     join_df = df1_1.join(df2_1, 'id', 'left')
+    join_df.printSchema()
 
     log.info("Fetching column name from the data frame")
     colnames = join_df.columns
-    log.info("Old column of the data frame" % (colnames))
+    join_df_1 = join_df.toDF(*colnames)
+    join_df_1.printSchema()
+
+    log.info("Old column of the data frame %s" % (colnames))
     log.info("Old and new column mapping")
     columndict = {"btc_a": "bitcoin_address", "cc_t": "credit_card_type", "id": "client_identifier"}
 
@@ -74,12 +78,12 @@ class KommatiPara:
     log.info("Renaming column of data frame")
     try:
         newcolumn = functions.remane_column(columndict, colnames)
-        log.info("New column of the data frame" % (newcolumn))
-        rename_df = join_df.toDF(*newcolumn)
+        log.info("New column of the data frame %s" % (newcolumn))
+        rename_df = join_df_1.toDF(*newcolumn)
     except:
         log.error("There is an exception in renaming column")
 
-
+    print(len(rename_df.columns))
     rename_df.printSchema()
     rename_df.show()
 
