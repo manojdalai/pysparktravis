@@ -49,6 +49,7 @@ class KommatiPara:
     countries = sys.argv[3]
     # FILTER DATA FRAME
     try:
+        df1 = df1.drop('email')
         df1_1 = df1.filter(functions.isCountryMatchedUDF(F.lit(countries), df1.country))
     except:
         log.error("There is an exception in filtering data frame")
