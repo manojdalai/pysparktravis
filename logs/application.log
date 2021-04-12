@@ -1,0 +1,100 @@
+2021-04-12 00:56:31,105 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 00:56:31,108 — ABM AMRO — INFO — Current time 20210412005631
+2021-04-12 00:56:31,108 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 00:56:31,108 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 00:56:31,108 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 00:56:31,109 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 00:56:49,959 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 00:57:30,659 — ABM AMRO — INFO — Loading 2nd data set
+2021-04-12 00:57:31,939 — ABM AMRO — INFO — Joining 2 data frame. Performing Left join
+2021-04-12 00:57:34,277 — ABM AMRO — INFO — Writing data as CSV to location 'client_data' 
+2021-04-12 01:01:01,658 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 01:01:01,658 — ABM AMRO — INFO — Current time 20210412010101
+2021-04-12 01:01:01,658 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 01:01:01,659 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 01:01:01,659 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 01:01:01,659 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 01:01:15,617 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 01:19:07,451 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 01:19:07,454 — ABM AMRO — INFO — Current time 20210412011907
+2021-04-12 01:19:07,454 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 01:19:07,454 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 01:19:07,455 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 01:19:07,455 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 01:19:20,963 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 01:19:47,475 — ABM AMRO — INFO — Loading 2nd data set
+2021-04-12 01:19:48,804 — ABM AMRO — INFO — Joining 2 data frame. Performing Left join
+2021-04-12 01:19:48,857 — ABM AMRO — INFO — Renaming column of data frame
+2021-04-12 01:19:51,411 — ABM AMRO — INFO — Writing data as CSV to location 'client_data' 
+2021-04-12 01:35:57,848 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 01:35:57,853 — ABM AMRO — INFO — Current time 20210412013557
+2021-04-12 01:35:57,854 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 01:35:57,854 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 01:35:57,855 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 01:35:57,855 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 01:36:16,160 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 01:36:37,107 — ABM AMRO — INFO — Loading 2nd data set
+2021-04-12 01:36:38,851 — ABM AMRO — INFO — Joining 2 data frame. Performing Left join
+2021-04-12 01:36:38,945 — ABM AMRO — INFO — Fetching column name from the data frame
+2021-04-12 01:36:38,947 — ABM AMRO — INFO — Old and new column mapping
+2021-04-12 01:36:38,948 — ABM AMRO — INFO — Renaming column of data frame
+2021-04-12 01:36:42,054 — ABM AMRO — INFO — Writing data as CSV to location 'client_data' 
+2021-04-12 01:44:01,779 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 01:44:01,784 — ABM AMRO — INFO — Current time 20210412014401
+2021-04-12 01:44:01,784 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 01:44:01,784 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 01:44:01,784 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 01:44:01,785 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 01:44:20,432 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 01:44:41,934 — ABM AMRO — INFO — Loading 2nd data set
+2021-04-12 01:44:43,454 — ABM AMRO — INFO — Joining 2 data frame. Performing Left join
+2021-04-12 01:44:43,517 — ABM AMRO — INFO — Fetching column name from the data frame
+2021-04-12 01:44:43,519 — ABM AMRO — INFO — Old column of the data frame
+2021-04-12 01:44:43,520 — ABM AMRO — INFO — Old and new column mapping
+2021-04-12 01:44:43,520 — ABM AMRO — INFO — Renaming column of data frame
+2021-04-12 01:44:43,520 — ABM AMRO — INFO — New column of the data frame
+2021-04-12 01:44:45,848 — ABM AMRO — INFO — Writing data as CSV to location 'client_data' 
+2021-04-12 01:47:57,677 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 01:47:57,681 — ABM AMRO — INFO — Current time 20210412014757
+2021-04-12 01:47:57,681 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 01:47:57,682 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 01:47:57,682 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 01:47:57,682 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 01:48:38,459 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 01:48:52,453 — ABM AMRO — INFO — Loading 2nd data set
+2021-04-12 01:48:53,833 — ABM AMRO — INFO — Joining 2 data frame. Performing Left join
+2021-04-12 01:48:53,880 — ABM AMRO — INFO — Fetching column name from the data frame
+2021-04-12 01:48:53,884 — ABM AMRO — INFO — Old column of the data frame ['id', 'first_name', 'last_name', 'email', 'country', 'btc_a', 'cc_t']
+2021-04-12 01:48:53,885 — ABM AMRO — INFO — Old and new column mapping
+2021-04-12 01:48:53,886 — ABM AMRO — INFO — Renaming column of data frame
+2021-04-12 01:48:53,887 — ABM AMRO — INFO — New column of the data frame ['client_identifier', 'first_name', 'last_name', 'email', 'country', 'bitcoin_address', 'credit_card_type']
+2021-04-12 01:48:57,218 — ABM AMRO — INFO — Writing data as CSV to location 'client_data' 
+2021-04-12 01:55:41,770 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 01:55:41,775 — ABM AMRO — INFO — Current time 20210412015541
+2021-04-12 01:55:41,777 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 01:55:41,778 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 01:55:41,779 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 01:55:41,780 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 01:56:12,263 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 01:56:33,837 — ABM AMRO — INFO — Loading 2nd data set
+2021-04-12 01:56:35,187 — ABM AMRO — INFO — Joining 2 data frame. Performing Left join
+2021-04-12 01:56:35,247 — ABM AMRO — INFO — Fetching column name from the data frame
+2021-04-12 01:56:35,251 — ABM AMRO — INFO — Old column of the data frame ['id', 'first_name', 'last_name', 'email', 'country', 'btc_a', 'cc_t']
+2021-04-12 01:56:35,252 — ABM AMRO — INFO — Old and new column mapping
+2021-04-12 01:56:35,253 — ABM AMRO — INFO — Renaming column of data frame
+2021-04-12 01:56:35,255 — ABM AMRO — INFO — New column of the data frame ['client_identifier', 'first_name', 'last_name', 'email', 'country', 'bitcoin_address', 'credit_card_type']
+2021-04-12 01:57:50,907 — ABM AMRO — INFO — Starting pyspark application...
+2021-04-12 01:57:50,911 — ABM AMRO — INFO — Current time 20210412015750
+2021-04-12 01:57:50,912 — ABM AMRO — INFO — Input filepath for dataset 1 input/dataset_one.csv
+2021-04-12 01:57:50,913 — ABM AMRO — INFO — Input filepath for dataset 2 input/dataset_two.csv
+2021-04-12 01:57:50,914 — ABM AMRO — INFO — Country list United Kingdom,Netherlands
+2021-04-12 01:57:50,915 — ABM AMRO — INFO — Output directory client_data
+2021-04-12 01:58:09,932 — ABM AMRO — INFO — Loading 1st data set
+2021-04-12 01:58:34,966 — ABM AMRO — INFO — Loading 2nd data set
+2021-04-12 01:58:36,343 — ABM AMRO — INFO — Joining 2 data frame. Performing Left join
+2021-04-12 01:58:36,403 — ABM AMRO — INFO — Fetching column name from the data frame
+2021-04-12 01:58:36,408 — ABM AMRO — INFO — Old column of the data frame ['id', 'first_name', 'last_name', 'email', 'country', 'btc_a', 'cc_t']
+2021-04-12 01:58:36,410 — ABM AMRO — INFO — Old and new column mapping
+2021-04-12 01:58:36,411 — ABM AMRO — INFO — Renaming column of data frame
+2021-04-12 01:58:36,413 — ABM AMRO — INFO — New column of the data frame ['client_identifier', 'first_name', 'last_name', 'email', 'country', 'bitcoin_address', 'credit_card_type']
+2021-04-12 01:58:39,253 — ABM AMRO — INFO — Writing data as CSV to location 'client_data' 

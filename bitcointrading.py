@@ -52,9 +52,52 @@ class KommatiPara:
         df1_1 = df1.filter(functions.isCountryMatchedUDF(F.lit(countries), df1.country))
     except:
         log.error("There is an exception in filtering data frame")
-
     df1_1.printSchema()
     df1_1.show()
 
+    # CREATING DATA FRAME FOR DATASET 2
+    log.info("Loading 2nd data set")
+    df2 = load_dataframe(spark, sys.argv[2])
+    df2_1 = df2.drop('cc_n')
+    df2_1.printSchema()
+    df2_1.show()
 
+    # DATAFRAME JOINING
+    log.info("Joining 2 data frame. Performing Left join")
+    join_df = df1_1.join(df2_1, 'id', 'left')
+    join_df.printSchema()
+    join_df.show()
+
+    log.info("Fetching column name from the data frame")
+    colnames = join_df.columns
+
+    log.info("Old column of the data frame %s" % (colnames))
+    log.info("Old and new column mapping")
+    columndict = {"btc_a": "bitcoin_address", "cc_t": "credit_card_type", "id": "client_identifier"}
+
+    # RENAME COLUMNS OF THE DATAFRAME
+    log.info("Renaming column of data frame")
+    try:
+        newcolumn = functions.remane_column(columndict, colnames)
+        log.info("New column of the data frame %s" % (newcolumn))
+        rename_df = join_df.toDF(*newcolumn)
+    except:
+        log.error("There is an exception in renaming column")
+
+    rename_df.printSchema()
+    rename_df.show()
+
+    # log.info("Renaming the columns")
+    # rename_df = join_df.withColumnRenamed('id', 'client_identifier') \
+    #     .withColumnRenamed('btc_a', 'bitcoin_address') \
+    #     .withColumnRenamed('cc_t', 'credit_card_type')
+    # rename_df.show()
+
+    log.info("Writing data as CSV to location 'client_data' ")
+    rename_df.write \
+        .format('csv') \
+        .option('header',True) \
+        .mode('overwrite') \
+        .option('sep',',') \
+        .save(output)
 
