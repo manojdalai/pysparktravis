@@ -1,6 +1,6 @@
+*.pyc
 /.idea/
 .idea/workspace.xml
-logs/application.log
-
+__pycache__
 
 
