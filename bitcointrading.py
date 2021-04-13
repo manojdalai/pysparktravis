@@ -1,8 +1,7 @@
-"""
-
-"""
 import sys
 from datetime import datetime
+
+from pyspark.sql.functions import udf
 from pyspark.sql.session import SparkSession
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType
 from userdefinedfunction import functions
@@ -10,9 +9,28 @@ from pyspark.sql import functions as F
 from customlogger import loghandler
 
 
+def encrypt_email(email):
+    """
+    This function will encrypt the email since its a PII data.
+
+    :param email: email of the client
+    :return: Masked email
+    :rtype: StringType
+    """
+    location = email.find('@')
+    if location > 0:
+        return email[0]+"***"+email[location-1:]
+    else:
+        return "xxxxxx"
+
 class KommatiPara:
     """
-
+    This class is used to perform following task:
+    It Only use clients from the United Kingdom or the Netherlands. Can be applied more filter
+    Remove personal identifiable information from the first dataset, **excluding emails**.
+    Remove credit card number from the second dataset.
+    Data should be joined using the **id** field.
+    Rename the columns for the easier readability to the business users.
     """
     currenttime = datetime.now().strftime('%Y%m%d%H%M%S')
 
@@ -43,9 +61,9 @@ class KommatiPara:
 
     def load_dataframe(spark, filename):
         """load data sets such as dataset 1 and dataset 3
-
-        :param filename: input file nema (csv).
+        :param filename: input file name (csv).
         :return: dataframe with header
+        :rtype: Dataframe
         """
         raw_data = spark.read \
             .format('csv') \
@@ -57,12 +75,16 @@ class KommatiPara:
     log.info("Loading 1st data set")
     df1 = load_dataframe(spark, sys.argv[1])
     countries = sys.argv[3]
+
     # FILTER DATA FRAME
     try:
-        df1 = df1.drop('email')
+        log.info("Dropping column i.e. last_name because its PII data")
+        df1 = df1.drop('last_name')
+        log.info("Filter by list of countries")
         df1_1 = df1.filter(functions.isCountryMatchedUDF(F.lit(countries), df1.country))
     except:
         log.error("There is an exception in filtering data frame")
+    df1_1.printSchema()
     df1_1.printSchema()
     df1_1.show()
 
@@ -95,8 +117,13 @@ class KommatiPara:
     except:
         log.error("There is an exception in renaming column")
 
-    rename_df.printSchema()
-    rename_df.show()
+    mask_df = udf(encrypt_email, StringType())
+    log.info("Masking of the email is in progress")
+    rename_df_1 = rename_df.withColumn("email", mask_df(rename_df.email))
+
+
+    rename_df_1.printSchema()
+    rename_df_1.show()
 
     # log.info("Renaming the columns")
     # rename_df = join_df.withColumnRenamed('id', 'client_identifier') \
@@ -105,10 +132,9 @@ class KommatiPara:
     # rename_df.show()
 
     log.info("Writing data as CSV to location 'client_data' ")
-    rename_df.write \
+    rename_df_1.write \
         .format('csv') \
         .option('header',True) \
         .mode('overwrite') \
         .option('sep',',') \
         .save(output)
-

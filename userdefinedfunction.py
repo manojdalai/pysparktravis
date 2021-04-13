@@ -1,5 +1,6 @@
 from pyspark.sql.functions import udf
-from pyspark.sql.types import BooleanType
+from pyspark.sql.types import BooleanType, StringType
+
 
 class functions:
     # GENERIC FUNCTION TO FILTER DATA FRAME
@@ -46,3 +47,5 @@ class functions:
                 if oldcol in v:
                     colnames[i] = v.replace(oldcol, newcol)
         return colnames
+
+
