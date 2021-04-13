@@ -1,6 +1,4 @@
-"""
 
-"""
 import sys
 from datetime import datetime
 from pyspark.sql.session import SparkSession
@@ -12,6 +10,13 @@ from customlogger import loghandler
 
 class KommatiPara:
     """
+    This class is used to perform following task:
+
+    It Only use clients from the United Kingdom or the Netherlands. Can be applied more filter
+    Remove personal identifiable information from the first dataset, **excluding emails**.
+    Remove credit card number from the second dataset.
+    Data should be joined using the **id** field.
+    Rename the columns for the easier readability to the business users.
 
     """
     currenttime = datetime.now().strftime('%Y%m%d%H%M%S')
@@ -44,8 +49,9 @@ class KommatiPara:
     def load_dataframe(spark, filename):
         """load data sets such as dataset 1 and dataset 3
 
-        :param filename: input file nema (csv).
+        :param filename: input file name (csv).
         :return: dataframe with header
+        :rtype: Dataframe
         """
         raw_data = spark.read \
             .format('csv') \
@@ -57,6 +63,7 @@ class KommatiPara:
     log.info("Loading 1st data set")
     df1 = load_dataframe(spark, sys.argv[1])
     countries = sys.argv[3]
+
     # FILTER DATA FRAME
     try:
         df1 = df1.drop('email')
