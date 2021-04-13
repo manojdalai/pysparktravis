@@ -85,7 +85,6 @@ class KommatiPara:
     except:
         log.error("There is an exception in filtering data frame")
     df1_1.printSchema()
-    df1_1.printSchema()
     df1_1.show()
 
     # CREATING DATA FRAME FOR DATASET 2
