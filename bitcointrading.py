@@ -11,7 +11,15 @@ from customlogger import loghandler
 
 def encrypt_email(email):
     """
+Branch2-Remove_credit_card_information
     This function will encrypt the email since its a PII data.
+    This class is used to perform following task:
+
+    It Only use clients from the United Kingdom or the Netherlands. Can be applied more filter
+    Remove personal identifiable information from the first dataset, **excluding emails**.
+    Remove credit card number from the second dataset.
+    Data should be joined using the **id** field.
+    Rename the columns for the easier readability to the business users.
 
     :param email: email of the client
     :return: Masked email
@@ -61,6 +69,7 @@ class KommatiPara:
 
     def load_dataframe(spark, filename):
         """load data sets such as dataset 1 and dataset 3
+
         :param filename: input file name (csv).
         :return: dataframe with header
         :rtype: Dataframe
