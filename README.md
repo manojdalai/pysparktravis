@@ -2,6 +2,12 @@
 
 [travisci]: https://img.shields.io/travis/com/manojdalai/pysparktravis.svg?logo=travis&logoColor=white&label=Travis%20CI
 [github_release]: https://img.shields.io/github/v/release/manojdalai/pysparktravis.svg?logo=github&logoColor=white
+[![Travis CI][travisci]](https://travis-ci.com/manojdalai/pysparktravis)
+[![Generic badge](https://img.shields.io/badge/pyspark-2.4.6-<COLOR>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/python-3.7.x-<COLOR>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Hadoop-2.7-<COLOR>.svg)](https://shields.io/)
+[![GitHub Release][github_release]](https://github.com/manojdalai/pysparktravis/releases/)
+![Maintaner](https://img.shields.io/badge/maintainer-ManojDalai-blue)
 
 ## Pyspark
 Following logic applied to python class i.e bitcointrading.py
@@ -93,3 +99,9 @@ This function is used to check the application logs after build/deploy. This con
     >>>    if line:
     >>>       print(line)
 ```
+
+## Github & Travis-CI Integration
+
+### Continuous Integration Workflow
+
+### Github Check API on Travis-CI
